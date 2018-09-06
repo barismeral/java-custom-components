@@ -1,9 +1,12 @@
 import gui.controls.Button;
+import gui.controls.RadioButton;
 import gui.controls.Label;
 import gui.controls.ProgressBar;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 /**
  * test main class
@@ -14,7 +17,7 @@ public class TestMain extends JFrame implements Runnable {
 
     TestMain(){
 // frame create and ser
-        this.setSize(420,150);
+        this.setSize(600,150);
         this.setDefaultCloseOperation(3);
         setLocationRelativeTo(null);
         this.getContentPane().setLayout(new FlowLayout());
@@ -30,13 +33,21 @@ public class TestMain extends JFrame implements Runnable {
 //label create and set
         Label label = new Label("Label");
         label.setFont(new Font("Verdana",Font.PLAIN,20));
+//label create and set
+
+        RadioButton radioButton = new RadioButton(true);
+        radioButton.setText("radioButton");
+
+
 
 
 
 // add components in JFrame
-        this.getContentPane().add(progressBar);
-        this.getContentPane().add(button);
-        this.getContentPane().add(label);
+        this.getContentPane().add(radioButton);
+      this.getContentPane().add(progressBar);
+       this.getContentPane().add(button);
+      this.getContentPane().add(label);
+
 
 
 
